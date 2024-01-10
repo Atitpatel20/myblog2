@@ -34,10 +34,38 @@ public class Test {
 //        System.out.println(data2);
 //        System.out.println(data3);
 
-        Function<String,Integer>data=str->str.length();
-        Integer result = data.apply("madhav");
-        System.out.println(result);
+        // find the length of given name
+//        Function<String,Integer>data=str->str.length();
+//        Integer result = data.apply("madhav");
+//        System.out.println(result);
 
+//        Function<Integer,Integer>val=i->i+10;
+//        Integer result = val.apply(15);
+//        System.out.println(result);
+
+//        List<Integer> numbers = Arrays.asList(10, 15, 20, 36, 24, 60);
+//        List<Integer> result = numbers.stream().map(i -> i + 10).collect(Collectors.toList());
+//        System.out.println(result);
+
+        // all the names in upper case and lower case
+//        List<String> names = Arrays.asList("mike", "jenish", "nikunj", "ayush");
+//        List<String> result1 = names.stream().map(str -> str.toUpperCase()).collect(Collectors.toList());
+//        List<String> result2 = names.stream().map(str -> str.toLowerCase()).collect(Collectors.toList());
+//        System.out.println(result1);
+//        System.out.println(result2);
+
+//        List<String> names = Arrays.asList("kamal", "nayan", "jenish", "avinash", "miral");
+//        List<String> res = names.stream().sorted().collect(Collectors.toList());
+//        System.out.println(res);
+
+//        List<Integer> numbers = Arrays.asList(15, 5, 20, 17, 26, 34, 14);
+//        List<Integer> result = numbers.stream().sorted().collect(Collectors.toList());
+//        System.out.println(result);
+
+        List<Integer> numbers = Arrays.asList(10, 15, 36, 20, 15, 27, 36, 69, 47, 27);
+        List<Integer> result1 = numbers.stream().distinct().collect(Collectors.toList());
+        List<Integer> result2 = numbers.stream().sorted().distinct().collect(Collectors.toList());
+        System.out.println(result1);
+        System.out.println(result2);
     }
-
 }
