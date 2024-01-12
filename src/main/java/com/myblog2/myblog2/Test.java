@@ -67,5 +67,21 @@ public class Test {
         List<Integer> result2 = numbers.stream().sorted().distinct().collect(Collectors.toList());
         System.out.println(result1);
         System.out.println(result2);
+
+
+        List<Person> names = Arrays.asList(
+                new Person("mike", 48, "Male"),
+                new Person("stallin", 27, "Male"),
+                new Person("hiya", 42, "Female"),
+                new Person("nisha", 15, "Female")
+
+        );
+        List<Person> nams = names.stream().filter(str -> str.getAge() > 30).collect(Collectors.toList());
+        for(Person n:nams){
+            System.out.println(n.getName());
+            System.out.println(n.getGender());
+            System.out.println(n.getAge());
+        }
     }
+
 }
