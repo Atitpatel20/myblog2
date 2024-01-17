@@ -6,6 +6,6 @@ import lombok.Data;
 public class PostDto {
     private long id;
     private String description;
-    private String tittle;
+    private String title;
     private String content;
 }
