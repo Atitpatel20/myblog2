@@ -42,7 +42,7 @@ public class PostServiceImpl implements PostService {
     public List<PostDto> getAllPost(int pageNo, int pageSize) {
         Pageable pageable = PageRequest.of(pageNo, pageSize);
         Page<Post> pagePost = postRepository.findAll(pageable);
-        pagePost.getContent()
+        List<Post> posts = pagePost.getContent();
         List<PostDto> postDtos = posts.stream().map(p -> mapToDto(p)).collect(Collectors.toList());
         return postDtos;
     }
@@ -59,7 +59,7 @@ public class PostServiceImpl implements PostService {
        post.setId(postDto.getId());
        post.setTitle(postDto.getTitle());
        post.setDescription(postDto.getDescription());
-       post.setContent(postDto.getDescription());
+       post.setContent(postDto.getContent());
         return post;
     }
 }
