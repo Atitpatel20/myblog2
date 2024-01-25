@@ -39,5 +39,4 @@ public class PostController {
         List<PostDto> postDtos= postService.getAllPost(pageNo,pageSize,sortBy,sortDir);
         return postDtos;
     }
-
 }
