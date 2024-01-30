@@ -31,9 +31,9 @@ public class CommentsController {
         return new ResponseEntity<>("Record is Deleted", HttpStatus.OK);
     }
 // http://localhost:8080/api/comments/2
-    @PutMapping("/{id}")
-    public ResponseEntity<CommentsDto> updateComment(@PathVariable long id, @RequestBody CommentsDto commentsDto) {
-        CommentsDto dto = commentService.updateComment(id, commentsDto);
+    @PutMapping("/{id}/post/{postId}")
+    public ResponseEntity<CommentsDto> updateComment(@PathVariable long id, @RequestBody CommentsDto commentsDto,@PathVariable long postId) {
+        CommentsDto dto = commentService.updateComment(id, commentsDto,postId);
         return new ResponseEntity<>(dto, HttpStatus.OK);
     }
 
