@@ -24,4 +24,17 @@ public class CommentsController {
         CommentsDto dtos = commentService.createComment(commentsDto, postId);
         return new ResponseEntity<>(dtos, HttpStatus.CREATED);
     }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<String> deleteRecordById(@PathVariable long id) {
+        commentService.deleteRecordById(id);
+        return new ResponseEntity<>("Record is Deleted", HttpStatus.OK);
+    }
+// http://localhost:8080/api/comments/2
+    @PutMapping("/{id}")
+    public ResponseEntity<CommentsDto> updateComment(@PathVariable long id, @RequestBody CommentsDto commentsDto) {
+        CommentsDto dto = commentService.updateComment(id, commentsDto);
+        return new ResponseEntity<>(dto, HttpStatus.OK);
+    }
+
 }
