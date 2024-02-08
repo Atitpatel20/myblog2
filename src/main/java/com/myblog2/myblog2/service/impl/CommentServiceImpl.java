@@ -7,7 +7,6 @@ import com.myblog2.myblog2.payload.CommentsDto;
 import com.myblog2.myblog2.repository.CommentRepository;
 import com.myblog2.myblog2.repository.PostRepository;
 import com.myblog2.myblog2.service.CommentService;
-import org.hibernate.annotations.Comments;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 

@@ -1,4 +1,4 @@
-package com.myblog2.myblog2;
+package stream_api_example;
 
 import java.util.Random;
 import java.util.function.Supplier;

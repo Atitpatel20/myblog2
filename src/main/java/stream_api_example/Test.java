@@ -1,9 +1,7 @@
-package com.myblog2.myblog2;
+package stream_api_example;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.function.Function;
-import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 public class Test {

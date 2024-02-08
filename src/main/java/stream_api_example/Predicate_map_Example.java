@@ -1,17 +1,17 @@
-package com.myblog2.myblog2;
+package stream_api_example;
 
-import org.antlr.v4.runtime.misc.Predicate;
 
 import java.util.Arrays;
 import java.util.List;
 import java.util.function.Function;
+import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 public class Predicate_map_Example {
     public static void main(String[] args) {
 //    Q-1    find the length of given string given me o/p true or false
 
-       Predicate<String> val=str->str.length()>5;
+       Predicate<String> val= str->str.length()>5;
         boolean result1 = val.test("Example");
         System.out.println(result1);
 
